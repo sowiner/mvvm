@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class App extends StatefulWidget {
   // const App({Key? key}) : super(key: key); // default constructor
-  const HomePage._internal(); // private constructor
+  const App._internal(); // private constructor
 
-  static const HomePage instance = HomePage._internal(); // single instance
+  static const App instance = App._internal(); // single instance
 
-  factory HomePage() => instance;
+  factory App() => instance;
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<App> createState() => _AppState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
