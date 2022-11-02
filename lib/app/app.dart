@@ -19,9 +19,9 @@ class _AppState extends State<App> {
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
-        title: Text("title"),
+        title: const Text("title"),
       ),
-      body: Center(
+      body: const Center(
         child: Text("Body"),
       ),
     );
