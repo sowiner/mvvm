@@ -1,22 +1,59 @@
-import 'package:flutter/material.dart';
-
-class FontConstants {
-  static const String fontFamity = "Montserrat";
+enum FontConstants {
+  // fontFamity = "Montserrat";
+  fontFamity
 }
 
-class FontWeightManager {
-  static const FontWeight light = FontWeight.w300;
-  static const FontWeight regular = FontWeight.w400;
-  static const FontWeight medium = FontWeight.w500;
-  static const FontWeight semiBold = FontWeight.w600;
-  static const FontWeight bold = FontWeight.w700;
-}
+// extension FontConstantsExtension on Enum {
+//   String get value {
+//     switch (this) {
+//       // case FontConstants.fontFamity:
+//       //   return "Montserrat";
+//       default:
+//         return "Montserrat";
+//     }
+//   }
+// }
 
-class FontSize {
-  static const double s12 = 12.0;
-  static const double s14 = 14.0;
-  static const double s16 = 16.0;
-  static const double s17 = 17.0;
-  static const double s18 = 18.0;
-  static const double s20 = 20.0;
-}
+enum FontWeightManager { light, regular, medium, semiBold, bold }
+
+// extension FontWeightManagerExtension on Enum {
+//   FontWeight get value {
+//     switch (this) {
+//       case FontWeightManager.light:
+//         return FontWeight.w300;
+//       case FontWeightManager.regular:
+//         return FontWeight.w400;
+//       case FontWeightManager.medium:
+//         return FontWeight.w500;
+//       case FontWeightManager.semiBold:
+//         return FontWeight.w600;
+//       case FontWeightManager.bold:
+//         return FontWeight.w700;
+//       default:
+//         return FontWeight.w500;
+//     }
+//   }
+// }
+
+enum FontSize { s12, s14, s16, s18, s20, s24 }
+
+// extension FontSizeExtension on Enum {
+//   double get value {
+//     switch (this) {
+//       case FontSize.s12:
+//         return 12.0;
+//       case FontSize.s14:
+//         return 14.0;
+//       case FontSize.s16:
+//         return 16.0;
+//       case FontSize.s18:
+//         return 18.0;
+//       case FontSize.s20:
+//         return 20.0;
+//       case FontSize.s24:
+//         return 24.0;
+//       default:
+//         return 14;
+//     }
+//   }
+// }
