@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm/presentation/theme/color_scheme.dart';
+import 'package:mvvm/presentation/gen_theme/base_theme.dart';
 
 class Home extends StatelessWidget {
   final String title;
@@ -15,8 +15,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context).extension<AppCustColors>()!;
-
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -24,8 +22,8 @@ class Home extends StatelessWidget {
           Switch(
             value: islightTheme,
             onChanged: (value) => toggleTheme(value),
-            activeTrackColor: Colors.black54,
-            activeColor: theme.primary,
+            activeTrackColor: context.baseTheme.darkGrey,
+            activeColor: context.baseTheme.primary,
           )
         ],
       ),

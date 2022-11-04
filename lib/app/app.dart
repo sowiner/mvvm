@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mvvm/app/home.dart';
-import 'package:mvvm/presentation/theme/color_scheme.dart';
+import 'package:mvvm/presentation/gen_theme/base_theme.dart';
 
 class App extends StatefulWidget {
   // const MyApp({super.key});
@@ -14,12 +14,11 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  final title = 'MVVM';
   bool islightTheme = true;
   void toggleTheme(bool change) {
     setState(() => islightTheme = change);
   }
-
-  final title = 'MVVM';
 
   @override
   Widget build(BuildContext context) {
@@ -27,12 +26,12 @@ class _AppState extends State<App> {
       title: title,
       theme: ThemeData.light().copyWith(
         extensions: <ThemeExtension<dynamic>>[
-          AppCustColors.light,
+          BaseTheme.light,
         ],
       ),
       darkTheme: ThemeData.dark().copyWith(
         extensions: <ThemeExtension<dynamic>>[
-          AppCustColors.dark,
+          BaseTheme.dark,
         ],
       ),
       themeMode: islightTheme ? ThemeMode.light : ThemeMode.dark,

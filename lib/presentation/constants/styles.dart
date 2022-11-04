@@ -7,7 +7,7 @@ TextStyle _getTextStyle(
     required FontWeight fontWeight,
     String? fontFamily,
     Color? color}) {
-  final c = color ?? HexColor.darkGrey;
+  final c = color ?? ColorManager.darkGrey;
   final ff = fontFamily ?? FontConstants.fontFamity.value;
 
   return TextStyle(
