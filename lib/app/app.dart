@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm/app/home.dart';
+import 'package:mvvm/presentation/theme/color_scheme.dart';
 
 class App extends StatefulWidget {
-  // const App({Key? key}) : super(key: key); // default constructor
-  const App._internal(); // private constructor
+  // const MyApp({super.key});
 
+  const App._internal();
   static const App instance = App._internal(); // single instance
-
   factory App() => instance;
 
   @override
@@ -13,16 +14,32 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  bool islightTheme = true;
+  void toggleTheme(bool change) {
+    setState(() => islightTheme = change);
+  }
+
+  final title = 'MVVM';
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: const Text("title"),
+    return MaterialApp(
+      title: title,
+      theme: ThemeData.light().copyWith(
+        extensions: <ThemeExtension<dynamic>>[
+          AppCustColors.light,
+        ],
       ),
-      body: const Center(
-        child: Text("Body"),
+      darkTheme: ThemeData.dark().copyWith(
+        extensions: <ThemeExtension<dynamic>>[
+          AppCustColors.dark,
+        ],
+      ),
+      themeMode: islightTheme ? ThemeMode.light : ThemeMode.dark,
+      home: Home(
+        title: title,
+        islightTheme: islightTheme,
+        toggleTheme: toggleTheme,
       ),
     );
   }

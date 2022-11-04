@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 @immutable
-class AppCustColors extends ThemeExtension<AppCustColors> {
+class AppCustFonts extends ThemeExtension<AppCustFonts> {
   final Color? primary;
   final Color? success;
   final Color? info;
   final Color? warning;
   final Color? danger;
 
-  const AppCustColors({
+  const AppCustFonts({
     required this.primary,
     required this.success,
     required this.info,
@@ -17,14 +17,14 @@ class AppCustColors extends ThemeExtension<AppCustColors> {
   });
 
   @override
-  AppCustColors copyWith({
+  AppCustFonts copyWith({
     Color? primary,
     Color? success,
     Color? info,
     Color? warning,
     Color? danger,
   }) {
-    return AppCustColors(
+    return AppCustFonts(
       primary: primary ?? this.primary,
       success: success ?? this.success,
       info: info ?? this.info,
@@ -35,11 +35,11 @@ class AppCustColors extends ThemeExtension<AppCustColors> {
 
   // Controls how the properties change on theme changes
   @override
-  AppCustColors lerp(ThemeExtension<AppCustColors>? other, double t) {
-    if (other is! AppCustColors) {
+  AppCustFonts lerp(ThemeExtension<AppCustFonts>? other, double t) {
+    if (other is! AppCustFonts) {
       return this;
     }
-    return AppCustColors(
+    return AppCustFonts(
       primary: Color.lerp(primary, other.primary, t),
       success: Color.lerp(success, other.success, t),
       info: Color.lerp(info, other.info, t),
@@ -51,11 +51,11 @@ class AppCustColors extends ThemeExtension<AppCustColors> {
   // Controls how it displays when the instance is being passed
   // to the `print()` method.
   @override
-  String toString() => 'AppCustColors('
+  String toString() => 'AppCustFonts('
       'primary: $primary, success: $success, info: $info, warning: $info, danger: $danger'
       ')';
   // the light theme
-  static const light = AppCustColors(
+  static const light = AppCustFonts(
     primary: Color(0xffed9728),
     success: Color(0xff28a745),
     info: Color(0xff17a2b8),
@@ -63,7 +63,7 @@ class AppCustColors extends ThemeExtension<AppCustColors> {
     danger: Color(0xffdc3545),
   );
   // the dark theme
-  static const dark = AppCustColors(
+  static const dark = AppCustFonts(
     primary: Color(0xffed9728),
     success: Color(0xff00bc8c),
     info: Color(0xff17a2b8),
