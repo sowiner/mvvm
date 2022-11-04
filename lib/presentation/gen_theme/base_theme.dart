@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:mvvm/presentation/constants/color.dart';
 import 'package:theme_tailor_annotation/theme_tailor_annotation.dart';
