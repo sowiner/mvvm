@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mvvm/app/home.dart';
+import 'package:mvvm/presentation/constants/color.dart';
 import 'package:mvvm/presentation/gen_theme/base_theme.dart';
 
 class App extends StatefulWidget {
@@ -25,13 +26,13 @@ class _AppState extends State<App> {
     return MaterialApp(
       title: title,
       theme: ThemeData.light().copyWith(
-        primaryColor: BaseTheme.light.primary,
+        colorScheme: ColorScheme.fromSeed(seedColor: ColorManager.primary),
         extensions: <ThemeExtension<dynamic>>[
           BaseTheme.light,
         ],
       ),
       darkTheme: ThemeData.dark().copyWith(
-        primaryColor: BaseTheme.dark.primary,
+        colorScheme: ColorScheme.fromSeed(seedColor: ColorManager.darkPrimary),
         extensions: <ThemeExtension<dynamic>>[
           BaseTheme.dark,
         ],

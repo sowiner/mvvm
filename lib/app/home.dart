@@ -29,7 +29,7 @@ class Home extends StatelessWidget {
         ],
       ),
       body: const Center(
-        child: Text("Body"),
+        child: Text("body"),
       ),
     );
   }
