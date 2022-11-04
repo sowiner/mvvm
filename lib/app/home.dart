@@ -18,11 +18,14 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+        backgroundColor: islightTheme
+            ? context.baseTheme.primary
+            : context.baseTheme.darkGrey,
         actions: [
           Switch(
             value: islightTheme,
             onChanged: (value) => toggleTheme(value),
-            activeTrackColor: context.baseTheme.darkGrey,
+            activeTrackColor: Colors.white,
             activeColor: context.baseTheme.primary,
           )
         ],

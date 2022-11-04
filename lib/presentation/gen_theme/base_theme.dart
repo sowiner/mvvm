@@ -18,11 +18,26 @@ class $_BaseTheme {
     fontFeatures: const [FontFeature.proportionalFigures()],
   );
 
-  static List<Color> primary = [ColorManager.primary];
-  static List<Color> grey = [ColorManager.grey];
-  static List<Color> darkGrey = [ColorManager.darkGrey];
-  static List<Color> lightGrey = [ColorManager.lightGrey];
-  static List<Color> primaryOpacity70 = [ColorManager.primaryOpacity70];
+  static List<Color> primary = [
+    ColorManager.primary,
+    ColorManager.primary,
+  ];
+  static List<Color> grey = [
+    ColorManager.grey,
+    ColorManager.grey,
+  ];
+  static List<Color> darkGrey = [
+    ColorManager.darkGrey,
+    ColorManager.darkGrey,
+  ];
+  static List<Color> lightGrey = [
+    ColorManager.lightGrey,
+    ColorManager.lightGrey,
+  ];
+  static List<Color> primaryOpacity70 = [
+    ColorManager.primaryOpacity70,
+    ColorManager.primaryOpacity70,
+  ];
 
   static List<TextStyle> h1 = [
     _h1Style.copyWith(color: const Color.fromARGB(221, 25, 25, 25)),
