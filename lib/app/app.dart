@@ -25,11 +25,13 @@ class _AppState extends State<App> {
     return MaterialApp(
       title: title,
       theme: ThemeData.light().copyWith(
+        primaryColor: BaseTheme.light.primary,
         extensions: <ThemeExtension<dynamic>>[
           BaseTheme.light,
         ],
       ),
       darkTheme: ThemeData.dark().copyWith(
+        primaryColor: BaseTheme.dark.primary,
         extensions: <ThemeExtension<dynamic>>[
           BaseTheme.dark,
         ],

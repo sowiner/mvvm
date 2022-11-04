@@ -20,23 +20,58 @@ class $_BaseTheme {
 
   static List<Color> primary = [
     ColorManager.primary,
-    ColorManager.primary,
+    ColorManager.darkPrimary,
   ];
   static List<Color> grey = [
-    ColorManager.grey,
-    ColorManager.grey,
-  ];
-  static List<Color> darkGrey = [
-    ColorManager.darkGrey,
+    ColorManager.lightGrey,
     ColorManager.darkGrey,
   ];
-  static List<Color> lightGrey = [
-    ColorManager.lightGrey,
-    ColorManager.lightGrey,
+
+  static List<Color> secondary = [
+    ColorManager.secondary,
+    ColorManager.secondary,
   ];
-  static List<Color> primaryOpacity70 = [
-    ColorManager.primaryOpacity70,
-    ColorManager.primaryOpacity70,
+
+  static List<Color> accent = [
+    ColorManager.accent,
+    ColorManager.accent,
+  ];
+  static List<Color> neutral = [
+    ColorManager.neutral,
+    ColorManager.neutral,
+  ];
+  static List<Color> info = [
+    ColorManager.info,
+    ColorManager.info,
+  ];
+  static List<Color> success = [
+    ColorManager.success,
+    ColorManager.success,
+  ];
+  static List<Color> warning = [
+    ColorManager.warning,
+    ColorManager.warning,
+  ];
+  static List<Color> error = [
+    ColorManager.error,
+    ColorManager.error,
+  ];
+
+  static List<Color> white = [
+    ColorManager.white,
+    ColorManager.white,
+  ];
+  static List<Color> grey1 = [
+    ColorManager.grey1,
+    ColorManager.grey1,
+  ];
+  static List<Color> grey2 = [
+    ColorManager.grey2,
+    ColorManager.grey2,
+  ];
+  static List<Color> grey3 = [
+    ColorManager.grey3,
+    ColorManager.grey3,
   ];
 
   static List<TextStyle> h1 = [
