@@ -23,8 +23,6 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
     required this.grey1,
     required this.grey2,
     required this.grey3,
-    required this.h1,
-    required this.h2,
   });
 
   final Color primary;
@@ -40,8 +38,6 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
   final Color grey1;
   final Color grey2;
   final Color grey3;
-  final TextStyle h1;
-  final TextStyle h2;
 
   static final BaseTheme light = BaseTheme(
     primary: $_BaseTheme.primary[0],
@@ -57,8 +53,6 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
     grey1: $_BaseTheme.grey1[0],
     grey2: $_BaseTheme.grey2[0],
     grey3: $_BaseTheme.grey3[0],
-    h1: $_BaseTheme.h1[0],
-    h2: $_BaseTheme.h2[0],
   );
 
   static final BaseTheme dark = BaseTheme(
@@ -75,8 +69,6 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
     grey1: $_BaseTheme.grey1[1],
     grey2: $_BaseTheme.grey2[1],
     grey3: $_BaseTheme.grey3[1],
-    h1: $_BaseTheme.h1[1],
-    h2: $_BaseTheme.h2[1],
   );
 
   static final themes = [
@@ -99,8 +91,6 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
     Color? grey1,
     Color? grey2,
     Color? grey3,
-    TextStyle? h1,
-    TextStyle? h2,
   }) {
     return BaseTheme(
       primary: primary ?? this.primary,
@@ -116,8 +106,6 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
       grey1: grey1 ?? this.grey1,
       grey2: grey2 ?? this.grey2,
       grey3: grey3 ?? this.grey3,
-      h1: h1 ?? this.h1,
-      h2: h2 ?? this.h2,
     );
   }
 
@@ -138,8 +126,6 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
       grey1: Color.lerp(grey1, other.grey1, t)!,
       grey2: Color.lerp(grey2, other.grey2, t)!,
       grey3: Color.lerp(grey3, other.grey3, t)!,
-      h1: TextStyle.lerp(h1, other.h1, t)!,
-      h2: TextStyle.lerp(h2, other.h2, t)!,
     );
   }
 
@@ -160,9 +146,7 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
             const DeepCollectionEquality().equals(white, other.white) &&
             const DeepCollectionEquality().equals(grey1, other.grey1) &&
             const DeepCollectionEquality().equals(grey2, other.grey2) &&
-            const DeepCollectionEquality().equals(grey3, other.grey3) &&
-            const DeepCollectionEquality().equals(h1, other.h1) &&
-            const DeepCollectionEquality().equals(h2, other.h2));
+            const DeepCollectionEquality().equals(grey3, other.grey3));
   }
 
   @override
@@ -181,9 +165,7 @@ class BaseTheme extends ThemeExtension<BaseTheme> {
         const DeepCollectionEquality().hash(white),
         const DeepCollectionEquality().hash(grey1),
         const DeepCollectionEquality().hash(grey2),
-        const DeepCollectionEquality().hash(grey3),
-        const DeepCollectionEquality().hash(h1),
-        const DeepCollectionEquality().hash(h2));
+        const DeepCollectionEquality().hash(grey3));
   }
 }
 
